@@ -31,4 +31,13 @@ class Cart(object):
             self.cart[product_id]['quantity'] = quantity
         else:
             self.cart[product_id]['quantity'] += quantity
-        self.save()                                       
+        self.save() 
+
+    def save(self):
+        """
+        #Update the session cart
+        """ 
+        self.session[settings.CART_SESSION_ID] = self.cart
+        #make the session as "modified" to make site it is saved
+        self.session.modified = True
+                                               
