@@ -83,5 +83,6 @@ class Cart(object):
         Remove cart from session
         """  
         del self.session[settings.CART_SESSION_ID]
-        self.session.modified = True   
+        self.session.modified = True 
+          
 
