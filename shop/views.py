@@ -14,7 +14,7 @@ def product_list(request,category_slug=None):
     return render(request,'shop/product/list.html',
                            {'category':category,
                            'categories':categories,
-                           'products':product})  
+                           'products':products})  
 
 def product_detail(request,id,slug):
     """
@@ -27,8 +27,8 @@ def product_detail(request,id,slug):
     return render(request,
                  'shop/product/detail.html',
                  {'product':product})  
-                 
-                                          
+
+
 
 
 
